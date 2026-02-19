@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SNAKE</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>SNAKE</h1>
+      <div class="main-content">
+        <aside class="leaderboard">
+          <h3>리더보드</h3>
+          <ol id="leaderboard-list">
+            <li class="leaderboard-loading">불러오는 중...</li>
+          </ol>
+        </aside>
+        <div class="game-wrapper">
+      <div class="game-container">
+        <div class="info-bar">
+          <span id="score">점수: 0</span>
+          <span id="speed-display">속도: 350ms</span>
+          <span id="high-score">최고: 0</span>
+          <button id="pause-btn" class="pause-btn hidden">일시정지</button>
+        </div>
+        <canvas id="game-canvas"></canvas>
+        <div id="game-over" class="overlay hidden">
+          <div class="overlay-content">
+            <h2>게임 오버!</h2>
+            <p>최종 점수: <span id="final-score">0</span></p>
+            <div id="nickname-form" class="nickname-form">
+              <input type="text" id="nickname-input" placeholder="닉네임 (기록하려면 입력)" maxlength="20" />
+              <span id="record-error" class="record-error hidden"></span>
+              <span id="record-success" class="record-success hidden">기록 완료!</span>
+              <div class="button-group">
+                <button id="record-btn">기록하기</button>
+                <button id="restart-btn">다시 하기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="pause-overlay" class="overlay hidden">
+          <div class="overlay-content">
+            <h2>일시정지</h2>
+            <div class="button-group">
+              <button id="resume-btn">재개</button>
+              <button id="quit-btn">그만두기</button>
+            </div>
+          </div>
+        </div>
+        <div id="start-screen" class="overlay">
+          <div class="overlay-content">
+            <h2>SNAKE</h2>
+            <button id="start-btn">게임 시작</button>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
